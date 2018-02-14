@@ -8,3 +8,8 @@ body {
    text-align: center;
    color: bisque
 }
+
+.pic {
+    height: 150px;
+    width: 150px;
+}
