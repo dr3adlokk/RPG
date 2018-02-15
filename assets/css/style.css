@@ -13,3 +13,9 @@ body {
     height: 150px;
     width: 150px;
 }
+
+.img-responsive {
+    height: 600px;
+    width: 1000px;
+    align-items: center
+}

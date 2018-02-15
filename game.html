@@ -68,9 +68,9 @@
     //Object declarations for characters.
     var characters = [
         bastila = {
-            name: "bastila",
+            name: "Bastila Shan",
             image: "<img src = 'assets/images/Bastila2.jpg' class='pic' id = 'bastila'>",
-            defendImage: "<img src = 'assets/images/bastila2.jpg>",
+            defendImage: "<img src = 'assets/images/Bastila2.jpg>",
             baseAttack: 5,
             attack: 5,
             health: 50,
@@ -100,7 +100,7 @@
         exar = {
             name: "Exar Kun",
             image: "<img src = 'assets/images/exar kun.png' class='pic' id = 'exar'>",
-            defendImage: "<img src = 'assets/images/exar kun.jpg'>",
+            defendImage: "<img src = 'assets/images/exar kun.png'>",
             baseAttack: 10, 
             attack: 10,
             health: 40,
@@ -112,14 +112,14 @@
     console.log(enemyCount);
     
     //Title Screen Animations
-        $('#top').append("<img src = 'assets/images/starwars.png' class = 'img-responsive'>");
-        $('#middle').append("<h1>Episode 1: Battle of the Jedi</h1>"); 
+        $('#top').append("<img src = 'assets/images/background.jpg' class = 'img-responsive'>");
+        $('#middle').append("<h1>Masters of The Force</h1>"); 
         $('#bottom').append("<button type='button' class='btn btn-outline-warning' id='start'>Start Game</button>");
         fadeAllIn();
         console.log(character);
     //Start Game on clicking the #start button.
         $('#start').on("click", function(){
-            $(document.body).css('background-image', 'url(assets/images/endorbg.jpg)')
+            $(document.body).css('background-image', 'url(assets/images/background.jpg)')
                 playGame();
                 var saber = new Audio("assets/sounds/saber.mp3");
                 saber.play();
@@ -156,7 +156,7 @@
     //Play Game Function
         function playGame(){
             fadeAllOut();
-            $('#top').append("<img src = 'assets/images/starwars.png' class = 'img-responsive'>");
+            $('#top').append("<img src = 'assets/images/lords.jpg' class = 'img-responsive'>");
             $('#middle').append("<h1>Choose your character</h1>");
             $('#bottom').append(bastila.image, boba.image, maul.image, exar.image);
             fadeAllIn();
@@ -299,7 +299,7 @@
     //Win Code
         function winner(char){
             fadeAllOut();
-            $('#top').append("<img src = 'assets/images/starwars.png' class = 'img-responsive'>");
+            $('#top').append("<img src = 'assets/images/lords.jpg' class = 'img-responsive'>");
             $('#middle').append("<h1>Congratulations, "+char.name+" you have won the battle!</h1>");
             $('#bottom').append("<button class = 'btn btn-warning' id = 'reset'>Play Again?</button>");
             fadeAllIn();
@@ -310,7 +310,7 @@
     //Loser Code
         function loser(char){
             fadeAllOut();
-            $('#top').append("<img src = 'assets/images/starwars.png' class = 'img-responsive'>");
+            $('#top').append("<img src = 'assets/images/lords.jpg' class = 'img-responsive'>");
             $('#middle').append("<h1>"+char.name+", the force was not with you. Train harder young Padawan!</h1>");
             $('#bottom').append("<button class = 'btn btn-warning' id = 'reset'>Play Again?</button>");
             fadeAllIn();
@@ -331,8 +331,8 @@
         characters = [
         bastila = {
             name: "bastila",
-            image: "<img src = 'assets/images/bastila.jpg' class='pic' id = 'bastila'>",
-            defendImage: "<img src = 'assets/images/luke.jpg'>",
+            image: "<img src = 'assets/images/Bastila2.jpg' class='pic' id = 'bastila'>",
+            defendImage: "<img src = 'assets/images/Bastila2.jpg'>",
             baseAttack: 5,
             attack: 5,
             health: 50,
@@ -342,7 +342,7 @@
         boba = {
             name: "boba",
             image: "<img src = 'assets/images/boba.jpg' class='pic' id = 'boba'>",
-            defendImage: "<img src = 'assets/images/vader.jpg'>",
+            defendImage: "<img src = 'assets/images/boba.jpg'>",
             baseAttack: 6,
             attack: 6,
             health: 80,
@@ -351,8 +351,8 @@
     
         maul = {
             name: "Darth Maul",
-            image: "<img src = 'assets/images/maul.jpeg' class='pic' id = 'maul'>",
-            defendImage: "<img src = 'assets/images/maul.jpeg'>",
+            image: "<img src = 'assets/images/maul.jpg' class='pic' id = 'maul'>",
+            defendImage: "<img src = 'assets/images/maul.jpg'>",
             baseAttack: 8,
             attack: 8,
             health: 60,
@@ -361,8 +361,8 @@
     
         exar = {
             name: "Exar Kun",
-            image: "<img src = 'assets/images/exar kun.jpg' id = 'exar'>",
-            defendImage: "<img src = 'assets/images/exar kun.jpg'>",
+            image: "<img src = 'assets/images/exar kun.png'class='pic' id = 'exar'>",
+            defendImage: "<img src = 'assets/images/exar kun.png'>",
             baseAttack: 10, 
             attack: 10,
             health: 40,
