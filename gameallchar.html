@@ -92,7 +92,7 @@
             image: "<img src = 'assets/images/maul.jpg' class='pic' id = 'maul'>",
             defendImage: "<img src = 'assets/images/maul.jpg'>",
             baseAttack: 8,
-            attack: 12,
+            attack: 8,
             health: 60,
            
         },
@@ -102,10 +102,50 @@
             image: "<img src = 'assets/images/exar kun.png' class='pic' id = 'exar'>",
             defendImage: "<img src = 'assets/images/exar kun.png'>",
             baseAttack: 10, 
-            attack: 15,
-            health: 70,
+            attack: 10,
+            health: 40,
 
-        }
+        },
+        kruhl = {
+            name: "Kruhl",
+            image: "<img src = 'assets/images/kruhl.jpg' class='pic' id = 'kruhl'>",
+            defendImage: "<img src = 'assets/images/kruhl.jpg'>",
+            baseAttack: 10, 
+            attack: 10,
+            health: 40,
+
+        },
+        
+        mara = {
+            name: "Mara Jade",
+            image: "<img src = 'assets/images/mara.jpg' class='pic' id = 'mara'>",
+            defendImage: "<img src = 'assets/images/mara.jpg'>",
+            baseAttack: 10, 
+            attack: 10,
+            health: 40,
+
+        },       
+        rey = {
+            name: "Rey",
+            image: "<img src = 'assets/images/rey.png' class='pic' id = 'rey'>",
+            defendImage: "<img src = 'assets/images/rey.png'>",
+            baseAttack: 10, 
+            attack: 10,
+            health: 40,
+
+        },
+        snoke = {
+            name: "Snoke of The First Order",
+            image: "<img src = 'assets/images/snoke.png' class='pic' id = 'snoke'>",
+            defendImage: "<img src = 'assets/images/snoke.png'>",
+            baseAttack: 10, 
+            attack: 10,
+            health: 40,
+
+        }                
+
+        
+
     ];
     
     var enemyCount = (characters.length - 1); 
@@ -158,7 +198,7 @@
             fadeAllOut();
             $('#top').append("<img src = 'assets/images/lords.jpg' class = 'img-responsive'>");
             $('#middle').append("<h1>Choose your character</h1>");
-            $('#bottom').append(bastila.image, boba.image, maul.image, exar.image);
+            $('#bottom').append(bastila.image, boba.image, maul.image, exar.image, kruhl.image, mara.image, rey.image, snoke.image);
             fadeAllIn();
                 $('#bottom').on("click", "img[id = bastila]", function(){
                     chooseChar(bastila);
@@ -196,6 +236,38 @@
                             chooseOpponent(exar);
                             $('img[id=exar]').fadeTo("slow", 0.0);
                     }
+                    $('#bottom').on("click", "img[id = kruhl]", function(){
+                    chooseChar(kruhl);
+                });
+                $('#top').on("click", "img[id = kruhl]", function(){
+                    if(enemyChosen == false){
+                            chooseOpponent(kruhl);
+                            $('img[id=kruhl]').fadeTo("slow", 0.0);
+                    }                    
+                    $('#bottom').on("click", "img[id = mara]", function(){
+                    chooseChar(mara);
+                });
+                $('#top').on("click", "img[id = mara]", function(){
+                    if(enemyChosen == false){
+                            chooseOpponent(mara);
+                            $('img[id=mara]').fadeTo("slow", 0.0);
+                    }                    
+                    $('#bottom').on("click", "img[id = rey]", function(){
+                    chooseChar(rey);
+                });
+                $('#top').on("click", "img[id = rey]", function(){
+                    if(enemyChosen == false){
+                            chooseOpponent(rey);
+                            $('img[id=rey]').fadeTo("slow", 0.0);
+                    }                    
+                    $('#bottom').on("click", "img[id = snoke]", function(){
+                    chooseChar(snoke);
+                });
+                $('#top').on("click", "img[id = snoke]", function(){
+                    if(enemyChosen == false){
+                            chooseOpponent(snoke);
+                            $('img[id=snoke]').fadeTo("slow", 0.0);
+                    }                    
                 
                 })
                 $('#attackButton').on("click", function(){
@@ -206,7 +278,7 @@
                         winner(character);
                     }
                 });	
-            }
+            
     //Choose character function
         function chooseChar(char){
             characterChosen = true; 
@@ -354,7 +426,7 @@
             image: "<img src = 'assets/images/maul.jpg' class='pic' id = 'maul'>",
             defendImage: "<img src = 'assets/images/maul.jpg'>",
             baseAttack: 8,
-            attack: 12,
+            attack: 8,
             health: 60,
            
         },
@@ -364,10 +436,48 @@
             image: "<img src = 'assets/images/exar kun.png'class='pic' id = 'exar'>",
             defendImage: "<img src = 'assets/images/exar kun.png'>",
             baseAttack: 10, 
-            attack: 15,
-            health: 70,
+            attack: 10,
+            health: 40,
             
-        }
+        },
+
+        kruhl = {
+            name: "Kruhl",
+            image: "<img src = 'assets/images/kruhl.jpg' class='pic' id = 'kruhl'>",
+            defendImage: "<img src = 'assets/images/kruhl.jpg'>",
+            baseAttack: 10, 
+            attack: 10,
+            health: 40,
+
+        },
+        
+        mara = {
+            name: "Mara Jade",
+            image: "<img src = 'assets/images/mara.jpg' class='pic' id = 'mara'>",
+            defendImage: "<img src = 'assets/images/mara.jpg'>",
+            baseAttack: 10, 
+            attack: 10,
+            health: 40,
+
+        },       
+        rey = {
+            name: "Rey",
+            image: "<img src = 'assets/images/rey.png' class='pic' id = 'rey'>",
+            defendImage: "<img src = 'assets/images/rey.png'>",
+            baseAttack: 10, 
+            attack: 10,
+            health: 40,
+
+        },
+        snoke = {
+            name: "Snoke of The First Order",
+            image: "<img src = 'assets/images/snoke.png' class='pic' id = 'snoke'>",
+            defendImage: "<img src = 'assets/images/snoke.png'>",
+            baseAttack: 10, 
+            attack: 10,
+            health: 40,
+
+        }              
     ];
             fadeAllOut();
             playGame();
@@ -375,7 +485,7 @@
     });
           
           
-          </script>
-    
+        </script>
+  
 </body>
 </html>
